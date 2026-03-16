@@ -432,20 +432,20 @@ footer p { font-size: 0.8rem; color: var(--gray); }
     <div class="steps">
       <div class="step fade-up">
         <div class="step-num">1</div>
-        <h3>Free Consultation</h3>
-        <p>We analyze your channel top to bottom and identify the biggest opportunities for growth. You walk away with actionable insights whether we work together or not.</p>
+        <h3>Free Loom Audit</h3>
+        <p>Submit your account and I'll send you a personalized 5-minute Loom video breaking down what's working, what's not, and where the biggest opportunities are. Free, no strings attached.</p>
         <span class="step-connector"></span>
       </div>
       <div class="step fade-up">
         <div class="step-num">2</div>
-        <h3>Custom Strategy</h3>
-        <p>You get a personalized growth plan built around your goals, your audience, and your content style. No cookie-cutter playbooks.</p>
+        <h3>Strategy Call</h3>
+        <p>If it's a fit, you'll hop on a call with our team to build a customized package around your specific goals and budget.</p>
         <span class="step-connector"></span>
       </div>
       <div class="step fade-up">
         <div class="step-num">3</div>
-        <h3>Execution & Support</h3>
-        <p>We implement the strategy together with ongoing support, feedback, and adjustments. You focus on creating. I handle the growth.</p>
+        <h3>Discovery & Execution</h3>
+        <p>Once you're on board, we kick off with a deep-dive discovery call. Then we get to work growing your audience with ongoing strategy and support.</p>
       </div>
     </div>
     <div style="text-align:center; margin-top:56px;" class="fade-up">
@@ -479,18 +479,18 @@ footer p { font-size: 0.8rem; color: var(--gray); }
     <div class="contact-grid">
       <div class="contact-info fade-up">
         <div class="section-label">Get Started</div>
-        <h2>Ready to grow your channel?</h2>
-        <p>Fill out the form and I'll personally review your channel before our call. No sales team, no bots. Just me, looking at your content and coming prepared with real ideas.</p>
+        <h2>Ready to grow your audience?</h2>
+        <p>Fill out the form and I'll personally review your account and send you a free 5-minute Loom video breakdown with real, actionable feedback. If it's a fit, our team will hop on a call to put together a personalized package for you.</p>
         <ul class="contact-perks">
-          <li><span class="perk-check">&#10003;</span> Free account audit before your call</li>
+          <li><span class="perk-check">&#10003;</span> Free personalized Loom video audit</li>
           <li><span class="perk-check">&#10003;</span> Actionable advice you can use right away</li>
-          <li><span class="perk-check">&#10003;</span> No pressure, no hard sell</li>
+          <li><span class="perk-check">&#10003;</span> Customized package based on your goals</li>
           <li><span class="perk-check">&#10003;</span> Response within 24 hours</li>
         </ul>
       </div>
       <div class="fade-up">
         <div class="form-card" id="formCard">
-          <form id="contactForm" novalidate>
+          <form id="contactForm" action="https://formspree.io/f/mgonnpzq" method="POST" novalidate>
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -574,8 +574,20 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     }
   });
   if (valid) {
-    document.getElementById('formCard').style.display = 'none';
-    document.getElementById('successState').style.display = 'block';
+    const form = document.getElementById('contactForm');
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(r => {
+      if (r.ok) {
+        document.getElementById('formCard').style.display = 'none';
+        document.getElementById('successState').style.display = 'block';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(() => alert('Something went wrong. Please try again.'));
   }
 });
 </script>
