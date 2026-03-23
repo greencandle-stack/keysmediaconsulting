@@ -581,17 +581,11 @@ footer p { font-size: 0.8rem; color: var(--gray); }
 </footer>
 
 <script>
-// Ticker duplication for infinite scroll
-const track = document.getElementById('tickerTrack');
-if (track) { track.innerHTML += track.innerHTML; }
-
-// Duplicate ticker for seamless loop
-const ticker = document.getElementById('tickerTrack');
-if (ticker) { ticker.innerHTML += ticker.innerHTML; }
-
 // Duplicate ticker cards for seamless loop
-const track = document.getElementById('tickerTrack');
-if (track) { track.innerHTML += track.innerHTML; }
+(function() {
+  var t = document.getElementById('tickerTrack');
+  if (t) { t.innerHTML += t.innerHTML; }
+})();
 
 // Hamburger
 const hamburger = document.getElementById('hamburger');
