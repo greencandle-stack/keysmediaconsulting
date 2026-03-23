@@ -134,6 +134,35 @@ nav .container {
 .hero-stat .num { font-size: 1.8rem; font-weight: 800; color: var(--white); }
 .hero-stat .label { font-size: 0.8rem; color: var(--gray); margin-top: 4px; }
 
+/* WINS TICKER */
+.wins-ticker{padding:48px 0;overflow:hidden;background:var(--bg-light);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.wins-ticker .ticker-label{text-align:center;font-size:.75rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.15em;margin-bottom:24px}
+.ticker-track{display:flex;gap:20px;animation:scroll 45s linear infinite;width:max-content}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.win-card{flex-shrink:0;width:280px;background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden;transition:border-color .3s,transform .3s}
+.win-card:hover{border-color:rgba(212,168,67,.3);transform:translateY(-2px)}
+.win-card a{text-decoration:none;color:inherit}
+.win-card img{width:100%;height:158px;object-fit:cover;display:block}
+.win-card .win-info{padding:14px 16px}
+.win-card .win-stat{font-size:1.2rem;font-weight:800;color:var(--green);margin-bottom:2px}
+.win-card .win-meta{font-size:.78rem;color:var(--gray);font-weight:500}
+
+/* WINS TICKER */
+.wins-ticker{padding:48px 0;overflow:hidden;background:var(--bg-light);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.wins-ticker .ticker-label{text-align:center;font-size:.75rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.15em;margin-bottom:24px}
+.ticker-track{display:flex;gap:20px;animation:tickscroll 50s linear infinite;width:max-content}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes tickscroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.win-card{flex-shrink:0;width:280px;background:var(--bg-card);border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden;transition:border-color .3s,transform .3s}
+.win-card:hover{border-color:rgba(212,168,67,.3);transform:translateY(-2px)}
+.win-card a{text-decoration:none;color:inherit;display:block}
+.win-card img{width:100%;height:158px;object-fit:cover;display:block}
+.win-card .win-info{padding:14px 16px}
+.win-card .win-stat{font-size:1.2rem;font-weight:800;color:var(--green);margin-bottom:2px}
+.win-card .win-meta{font-size:.78rem;color:var(--gray);font-weight:500}
+.win-card.tweet-card img{height:auto;max-height:158px;object-fit:contain;background:#0a0f1a;padding:12px}
+
 /* SECTION COMMON */
 section { padding: 100px 0; }
 .section-label {
@@ -358,6 +387,33 @@ footer p { font-size: 0.8rem; color: var(--gray); }
   </div>
 </section>
 
+<div class="wins-ticker">
+  <div class="ticker-label">Client Wins</div>
+  <div class="ticker-track" id="tickerTrack">
+    <!-- TFTC 100K+ -->
+    <div class="win-card"><a href="https://youtu.be/ffXgG4De2jc" target="_blank"><img src="https://img.youtube.com/vi/ffXgG4De2jc/mqdefault.jpg" alt="TFTC"><div class="win-info"><div class="win-stat">100K+ views</div><div class="win-meta">TFTC · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/7AWjoxZngxU" target="_blank"><img src="https://img.youtube.com/vi/7AWjoxZngxU/mqdefault.jpg" alt="TFTC"><div class="win-info"><div class="win-stat">100K+ views</div><div class="win-meta">TFTC · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/POMe9_k8pzk" target="_blank"><img src="https://img.youtube.com/vi/POMe9_k8pzk/mqdefault.jpg" alt="TFTC"><div class="win-info"><div class="win-stat">100K+ views</div><div class="win-meta">TFTC · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/1wqa-Nkmadk" target="_blank"><img src="https://img.youtube.com/vi/1wqa-Nkmadk/mqdefault.jpg" alt="TFTC"><div class="win-info"><div class="win-stat">100K+ views</div><div class="win-meta">TFTC · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/0Nl7Fu6d-w4" target="_blank"><img src="https://img.youtube.com/vi/0Nl7Fu6d-w4/mqdefault.jpg" alt="TFTC"><div class="win-info"><div class="win-stat">100K+ views</div><div class="win-meta">TFTC · YouTube</div></div></a></div>
+    <!-- Green Candle 50K+ -->
+    <div class="win-card"><a href="https://youtu.be/HsEyx4vMnJc" target="_blank"><img src="https://img.youtube.com/vi/HsEyx4vMnJc/mqdefault.jpg" alt="Green Candle"><div class="win-info"><div class="win-stat">100K+ views</div><div class="win-meta">Green Candle · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/if8NS8hNRxA" target="_blank"><img src="https://img.youtube.com/vi/if8NS8hNRxA/mqdefault.jpg" alt="Green Candle"><div class="win-info"><div class="win-stat">50K+ views</div><div class="win-meta">Green Candle · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/ttS-hqHiHzo" target="_blank"><img src="https://img.youtube.com/vi/ttS-hqHiHzo/mqdefault.jpg" alt="Green Candle"><div class="win-info"><div class="win-stat">50K+ views</div><div class="win-meta">Green Candle · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/xf4RqFuru2g" target="_blank"><img src="https://img.youtube.com/vi/xf4RqFuru2g/mqdefault.jpg" alt="Green Candle"><div class="win-info"><div class="win-stat">50K+ views</div><div class="win-meta">Green Candle · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/reuujC4IqaM" target="_blank"><img src="https://img.youtube.com/vi/reuujC4IqaM/mqdefault.jpg" alt="Green Candle"><div class="win-info"><div class="win-stat">50K+ views</div><div class="win-meta">Green Candle · YouTube</div></div></a></div>
+    <!-- X/Twitter wins -->
+    <div class="win-card"><a href="https://x.com/TFTC21/status/2029947845827055883" target="_blank"><div style="width:100%;height:158px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;font-size:2.5rem">📄</div><div class="win-info"><div class="win-stat">4.1M views</div><div class="win-meta">TFTC · X/Twitter</div></div></a></div>
+    <div class="win-card"><a href="https://x.com/Greencandleit/status/1803835971756040250" target="_blank"><div style="width:100%;height:158px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;font-size:2.5rem">🇵🇰</div><div class="win-info"><div class="win-stat">1.3M views</div><div class="win-meta">Green Candle · X/Twitter</div></div></a></div>
+    <div class="win-card"><a href="https://x.com/TFTC21/status/2029588613080420497" target="_blank"><div style="width:100%;height:158px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;font-size:2.5rem">🔬</div><div class="win-info"><div class="win-stat">1.2M views</div><div class="win-meta">TFTC · X/Twitter</div></div></a></div>
+    <div class="win-card"><a href="https://x.com/Greencandleit/status/2030342722499043642" target="_blank"><div style="width:100%;height:158px;background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;font-size:2.5rem">🃏</div><div class="win-info"><div class="win-stat">121K views</div><div class="win-meta">Green Candle · X/Twitter</div></div></a></div>
+    <!-- Small channel wins -->
+    <div class="win-card"><a href="https://youtu.be/2SLZtCZwfJk" target="_blank"><img src="https://img.youtube.com/vi/2SLZtCZwfJk/mqdefault.jpg" alt="Morelli"><div class="win-info"><div class="win-stat">100K+ views</div><div class="win-meta">Michael Morelli · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/A62c214hz5Q" target="_blank"><img src="https://img.youtube.com/vi/A62c214hz5Q/mqdefault.jpg" alt="Wesley"><div class="win-info"><div class="win-stat">10K+ views</div><div class="win-meta">Wesley Schlemmer · YouTube</div></div></a></div>
+    <div class="win-card"><a href="https://youtu.be/allz04Qd454" target="_blank"><img src="https://img.youtube.com/vi/allz04Qd454/mqdefault.jpg" alt="Pardue"><div class="win-info"><div class="win-stat">10K+ views</div><div class="win-meta">Josh Pardue · YouTube</div></div></a></div>
+  </div>
+</div>
+
 <section class="results" id="results">
   <div class="container">
     <div class="fade-up">
@@ -539,6 +595,10 @@ footer p { font-size: 0.8rem; color: var(--gray); }
 </footer>
 
 <script>
+// Ticker duplication for infinite scroll
+const track = document.getElementById('tickerTrack');
+if (track) { track.innerHTML += track.innerHTML; }
+
 // Hamburger
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
