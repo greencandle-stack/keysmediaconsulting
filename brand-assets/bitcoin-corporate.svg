@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-label="Bitcoin Corporate">
+  <rect width="420" height="120" rx="18" fill="#fff"/>
+  <circle cx="54" cy="60" r="30" fill="#f7931a"/>
+  <path d="M58.5 35v8.5c15 1.8 18.6 16 8.2 21.6 12.7 4 9.7 22.6-8.2 24.5V98h-9V89.8h-7V98h-9v-8.2H25v-8h6.5V38.2H25v-8h8.5V22h9v8.2h7V22h9Zm-16 26h12c12 0 12-14.8 0-14.8h-12V61Zm0 20.8h13.8c13.8 0 14-16.4 0-16.4H42.5v16.4Z" fill="#fff"/>
+  <text x="102" y="54" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="900" fill="#111827" letter-spacing="-1.2">BITCOIN</text>
+  <text x="102" y="84" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800" fill="#374151" letter-spacing="2.5">CORPORATE</text>
+</svg>
